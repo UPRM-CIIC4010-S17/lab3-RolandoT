@@ -4,7 +4,12 @@ import java.awt.Insets;
 import javax.swing.JPanel;
  
 public class MyPanelClass extends JPanel {
-            public void paintComponent(Graphics g) {
+            /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+			public void paintComponent(Graphics g) {
                         super.paintComponent(g);
  
                         //Compute interior coordinates
@@ -17,13 +22,19 @@ public class MyPanelClass extends JPanel {
                         int height = y2 - y1;
  
                         //Paint the background
-                        g.setColor(Color.BLACK);
-                        g.fillRect(x1, y1, width + 1, height + 1);
-                        //Draw a border
-                        g.setColor(Color.YELLOW);
-                        g.drawRect(x1, y1, width, height);
-                        //Draw a border
-                        g.setColor(Color.BLUE);
-                        g.drawRect(x1 + 10, y1 + 10, width - 20, height - 20);
+//                        g.setColor(Color.BLACK);
+//                        g.fillRect(x1, y1, width + 1, height + 1);
+//                        //Draw a border
+//                        g.setColor(Color.RED);
+//                        g.drawRect(x1, y1, width, height);
+//                        //Draw a border
+//                        g.setColor(Color.BLUE);
+//                        g.drawRect(x1 + 10, y1 + 10, width - 20, height - 20);
+//                        g.setColor(Color.ORANGE);
+//                        g.drawLine(x1, y1, x2, y2);
+//                        g.setColor(Color.ORANGE);
+//                        g.drawLine(x2, y1, x1, y2);
+                        g.setColor(Color.LIGHT_GRAY);
+                        g.fillOval(width/2,height/2, 55, 55);
             }
 }
